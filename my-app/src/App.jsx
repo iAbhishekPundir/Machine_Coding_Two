@@ -1,22 +1,21 @@
-import { Routes, Route } from 'react-router-dom'
+import React, { useState } from 'react';
+import {Routes, Route} from "react-router-dom";
+import {Home} from "./pages/Home"
+import { Header } from './components/Header';
+import { Archive } from './Components/Archive';
+import "./App.css"
 
-import "./App.css";
-import { Home } from './pages/Home'
-import { Header } from "./Components/Header";
-import { useContext } from 'react';
 
-
-function App() {
+const App = () => {
   return (
     <>
-      <div className='App'>
-        <Header />
-        <Routes>
-          <Route  path='/' element={<Home />}/>
-        </Routes>
-      </div>
+      <Header/>
+      <Routes>
+        <Route path="/" element= { <Home/> } />
+        <Route path="/archive"  element={ <Archive /> }/>
+      </Routes>
     </>
   );
-}
+};
 
 export default App;
