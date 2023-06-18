@@ -14,8 +14,11 @@ export const Header = () => {
        <div>
        <nav>
             <NavLink style ={getActiveStyle} to="/">
-                All Books
-            </NavLink>      
+                Habit Tracker
+            </NavLink>   
+            <NavLink style ={getActiveStyle} to="/archive">
+                Archived Habits
+            </NavLink>     
         </nav>
        </div>
     </>
